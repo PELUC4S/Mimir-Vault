@@ -683,10 +683,320 @@
 
 
 
-  <h1>Ignacio</h1>
+  <h1 style="display:none">Ignacio Vendrell — Perfil Profesional</h1>
 
+  <style>
+    /* ── Portfolio custom styles ── */
+    .pf-root {
+      font-family: "Roboto", sans-serif;
+      color: var(--md-typeset-color, #cdd6f4);
+      max-width: 860px;
+      margin: 0 auto;
+      padding-bottom: 3rem;
+    }
 
+    /* Hero */
+    .pf-hero {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem 0 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      flex-wrap: wrap;
+    }
+    .pf-avatar-wrap {
+      flex-shrink: 0;
+      position: relative;
+    }
+    .pf-avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #26c6da;
+      box-shadow: 0 0 28px rgba(38,198,218,.35);
+      transition: box-shadow .3s ease, transform .3s ease;
+    }
+    .pf-avatar:hover {
+      transform: scale(1.04);
+      box-shadow: 0 0 44px rgba(38,198,218,.6);
+    }
+    .pf-avatar-hint {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      background: #26c6da;
+      border-radius: 50%;
+      width: 22px; height: 22px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .7rem;
+      cursor: pointer;
+      title: "Reemplazá esta imagen con la tuya";
+      box-shadow: 0 2px 8px rgba(0,0,0,.4);
+    }
+    .pf-info { flex: 1; min-width: 220px; }
+    .pf-name {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 .25rem;
+      background: linear-gradient(135deg, #26c6da 0%, #80deea 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .pf-title {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #80deea;
+      margin: 0 0 .75rem;
+      opacity: .85;
+    }
+    .pf-bio {
+      font-size: .93rem;
+      line-height: 1.7;
+      opacity: .9;
+      margin: 0 0 1rem;
+    }
+    .pf-socials {
+      display: flex;
+      gap: .6rem;
+      flex-wrap: wrap;
+    }
+    .pf-social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .35rem .85rem;
+      border-radius: 20px;
+      font-size: .82rem;
+      font-weight: 500;
+      text-decoration: none !important;
+      border: 1px solid rgba(38,198,218,.4);
+      color: #80deea !important;
+      background: rgba(38,198,218,.06);
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+    .pf-social-btn:hover {
+      background: rgba(38,198,218,.18);
+      border-color: #26c6da;
+      transform: translateY(-2px);
+    }
+    .pf-social-btn svg { width:14px; height:14px; fill:currentColor; }
 
+    /* Skills chips */
+    .pf-skills-section { padding: 1.6rem 0 .5rem; }
+    .pf-section-title {
+      font-size: .72rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #26c6da;
+      margin-bottom: .8rem;
+      font-weight: 600;
+    }
+    .pf-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+    }
+    .pf-chip {
+      padding: .28rem .75rem;
+      border-radius: 12px;
+      font-size: .78rem;
+      font-weight: 500;
+      background: rgba(38,198,218,.1);
+      border: 1px solid rgba(38,198,218,.25);
+      color: #b2ebf2;
+      transition: background .2s, transform .2s;
+    }
+    .pf-chip:hover { background: rgba(38,198,218,.22); transform: translateY(-1px); }
+
+    /* Misc / Portfolio grid */
+    .pf-misc-section { padding: 2rem 0 0; }
+    .pf-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .pf-card {
+      display: block;
+      text-decoration: none !important;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      transition: background .25s, border-color .25s, transform .25s, box-shadow .25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .pf-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(38,198,218,.07) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    .pf-card:hover {
+      background: rgba(255,255,255,.07);
+      border-color: rgba(38,198,218,.4);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0,0,0,.28);
+    }
+    .pf-card:hover::before { opacity: 1; }
+    .pf-card-tag {
+      display: inline-block;
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .18rem .55rem;
+      border-radius: 8px;
+      margin-bottom: .6rem;
+    }
+    .tag-project  { background: rgba(66,165,245,.15); color: #90caf9; border: 1px solid rgba(66,165,245,.3); }
+    .tag-ctf      { background: rgba(255,183,77,.13); color: #ffe082; border: 1px solid rgba(255,183,77,.3); }
+    .tag-research { background: rgba(129,199,132,.13); color: #a5d6a7; border: 1px solid rgba(129,199,132,.3); }
+    .tag-misc     { background: rgba(206,147,216,.13); color: #e1bee7; border: 1px solid rgba(206,147,216,.3); }
+    .pf-card-title {
+      font-size: .97rem;
+      font-weight: 600;
+      color: #eceff1;
+      margin: 0 0 .4rem;
+    }
+    .pf-card-desc {
+      font-size: .82rem;
+      line-height: 1.55;
+      color: rgba(205,214,244,.65);
+      margin: 0;
+    }
+    .pf-card-arrow {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      font-size: 1rem;
+      opacity: 0;
+      transform: translateX(-4px);
+      transition: opacity .2s, transform .2s;
+      color: #26c6da;
+    }
+    .pf-card:hover .pf-card-arrow { opacity: 1; transform: translateX(0); }
+
+    /* Responsive */
+    @media (max-width: 540px) {
+      .pf-hero { flex-direction: column; text-align: center; }
+      .pf-socials { justify-content: center; }
+      .pf-chips { justify-content: center; }
+    }
+  </style>
+
+  <div class="pf-root">
+
+    <!-- ── HERO ── -->
+    <section class="pf-hero">
+      <div class="pf-avatar-wrap">
+        <!--
+          📌 REEMPLAZÁ esta imagen con la tuya de LinkedIn.
+          Guardá tu foto como "avatar.jpg" (o .png) en esta misma carpeta
+          y cambiá el src a "./avatar.jpg"
+        -->
+        <img
+          id="pf-avatar"
+          class="pf-avatar"
+          src="./avatar.jpg"
+          onerror="this.src='https://ui-avatars.com/api/?name=Ignacio+Vendrell&background=263238&color=26c6da&size=140&bold=true&format=svg'"
+          alt="Foto de perfil de Ignacio Vendrell"
+        >
+        <span class="pf-avatar-hint" title="Reemplazá src con tu foto de LinkedIn">📎</span>
+      </div>
+
+      <div class="pf-info">
+        <h2 class="pf-name">Ignacio Vendrell</h2>
+        <p class="pf-title">Cybersecurity · SOC Analyst · CTF Player</p>
+        <p class="pf-bio">
+          <!-- ✏️ Editá este texto con tu presentación profesional -->
+          Apasionado por la ciberseguridad ofensiva y defensiva.
+          Formo parte del equipo <strong>Mimir Vault</strong>, donde investigamos
+          amenazas, desarrollamos laboratorios SOC y competimos en CTFs.
+          Siempre aprendiendo, siempre rompiendo cosas (en entornos controlados).
+        </p>
+        <div class="pf-socials">
+          <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener" class="pf-social-btn" id="pf-linkedin">
+            <svg viewBox="0 0 24 24"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/tu-usuario" target="_blank" rel="noopener" class="pf-social-btn" id="pf-github">
+            <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+            GitHub
+          </a>
+          <a href="https://app.hackthebox.com/users/tu-id" target="_blank" rel="noopener" class="pf-social-btn" id="pf-htb">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 6v12l9 5 9-5V6L12 1zm0 2.18l7 3.89v7.86l-7 3.89-7-3.89V7.07l7-3.89z"/></svg>
+            HackTheBox
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS / TECNOLOGÍAS ── -->
+    <section class="pf-skills-section">
+      <p class="pf-section-title">Stack &amp; Habilidades</p>
+      <div class="pf-chips">
+        <!-- ✏️ Agregá o quitá chips según tu stack -->
+        <span class="pf-chip">SIEM / Splunk</span>
+        <span class="pf-chip">Wireshark</span>
+        <span class="pf-chip">Sigma Rules</span>
+        <span class="pf-chip">Nmap / Nessus</span>
+        <span class="pf-chip">Burp Suite</span>
+        <span class="pf-chip">Python</span>
+        <span class="pf-chip">Bash / PowerShell</span>
+        <span class="pf-chip">Linux</span>
+        <span class="pf-chip">Docker</span>
+        <span class="pf-chip">OSINT</span>
+        <span class="pf-chip">Threat Hunting</span>
+        <span class="pf-chip">Incident Response</span>
+      </div>
+    </section>
+
+    <!-- ── PORTFOLIO / MISCELÁNEAS ── -->
+    <section class="pf-misc-section">
+      <p class="pf-section-title">Proyectos, CTFs &amp; Misceláneas</p>
+      <div class="pf-grid" id="pf-grid">
+
+        <!-- ✏️ EJEMPLO: Proyecto -->
+        <a href="#" class="pf-card" id="pf-card-mimir">
+          <span class="pf-card-tag tag-project">Proyecto</span>
+          <span class="pf-card-arrow">→</span>
+          <p class="pf-card-title">Mimir Vault</p>
+          <p class="pf-card-desc">Blog colaborativo de ciberseguridad: laboratorios SOC, writeups y recursos del equipo.</p>
+        </a>
+
+        <!-- ✏️ EJEMPLO: CTF -->
+        <a href="#" class="pf-card" id="pf-card-ctf1">
+          <span class="pf-card-tag tag-ctf">CTF</span>
+          <span class="pf-card-arrow">→</span>
+          <p class="pf-card-title">HackTheBox — Máquina X</p>
+          <p class="pf-card-desc">Writeup de la máquina X. Explotación de [vulnerability], escalada de privilegios vía [método].</p>
+        </a>
+
+        <!-- ✏️ EJEMPLO: Investigación -->
+        <a href="#" class="pf-card" id="pf-card-research1">
+          <span class="pf-card-tag tag-research">Investigación</span>
+          <span class="pf-card-arrow">→</span>
+          <p class="pf-card-title">Análisis de Logs con Splunk</p>
+          <p class="pf-card-desc">Lab de detección de amenazas mediante correlación de eventos en entornos Windows.</p>
+        </a>
+
+        <!-- ✏️ EJEMPLO: Misc -->
+        <a href="#" class="pf-card" id="pf-card-misc1">
+          <span class="pf-card-tag tag-misc">Misc</span>
+          <span class="pf-card-arrow">→</span>
+          <p class="pf-card-title">Recurso / Tool</p>
+          <p class="pf-card-desc">Descripción breve de la herramienta, artículo, o recurso que querés compartir.</p>
+        </a>
+
+      </div>
+    </section>
+
+  </div><!-- /pf-root -->
 
 
 
