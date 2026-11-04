@@ -4,6 +4,7 @@ site_author: Peluc4s
 site_url: https://peluc4s.github.io/Mimir-Vault/
 markdown_extensions:
   - tables
+  - attr_list
 
 theme:
   name: material
@@ -18,7 +19,8 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
-
+extra_css:
+  - stylesheets/extra.css
 # Estructura del menú lateral (Navegación)
 nav:
   - Inicio: index.md
@@ -27,7 +29,7 @@ nav:
       - Octito: autores/octito.md
       - Octazo: autores/octazo.md
       - Pedro: autores/pedro.md
-      - Nachoide: autores/nachoide.md
+      - Ignacio: autores/nachoide.md
       - Gabrielini: autores/gabrielini.md
   - Laboratorios SOC:
       - Análisis de Logs: labs/analisis-logs.md
