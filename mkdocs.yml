@@ -2,6 +2,8 @@ site_name: Blog & Laboratorios de Ciberseguridad
 site_description: Portfolio colaborativo de este equipazo.
 site_author: Peluc4s
 site_url: https://peluc4s.github.io/Mimir-Vault/
+markdown_extensions:
+  - tables
 
 theme:
   name: material
