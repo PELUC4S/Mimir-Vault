@@ -1,3 +1,5 @@
+![Foto de perfil de Ignacio Vendrell](../assets/img/nachoide.png){ .avatar }
+
 # Ignacio Vendrell
 
 ## Sobre mí

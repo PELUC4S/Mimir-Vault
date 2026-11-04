@@ -1,0 +1,9 @@
+.avatar {
+  float: right;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--md-accent-fg-color);
+  margin: .45rem 0 1rem 1.5rem;
+}
