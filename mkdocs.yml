@@ -30,7 +30,7 @@ nav:
       - Octazo: autores/octazo.md
       - Pedro: autores/pedro.md
       - Ignacio: autores/nachoide.md
-      - Gabrielini: autores/gabrielini.md
+      - Gabriel: autores/gabrielini.md
   - Laboratorios SOC:
       - Análisis de Logs: labs/analisis-logs.md
       - Reglas Sigma: labs/reglas-sigma.md
