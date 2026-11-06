@@ -1,4 +1,4 @@
-# Bienvenidos a Nuestro Espacio de Ciberseguridad
+# Bienvenidos a Nuestro Espacio de <span class="title-highlight">Ciberseguridad</span>
 
 ¡Hola y bienvenido a nuestro portal! Somos **Florencia, Ignacio, Pedro, Octavio V., Octavio E. y Gabriel**, estudiantes de la **Tecnicatura Universitaria en Ciberseguridad** de la **Universidad Provincial de Córdoba (UPC)**.
 
