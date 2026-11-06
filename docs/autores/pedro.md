@@ -1,226 +1,150 @@
-# Pedro | Cyber Risk - Blue Team 
-
-
-
-> Analista en Ciberseguridad orientado a la defensa activa, gobernanza, normativas y gestión de riesgos informáticos (Cyber Risk Insurance). Interesado en la convergencia entre el análisis técnico de amenazas y la responsabilidad legal.
-
-
-
-\---
-
-
-
-##### 🎯 Perfil/Áreas de Interés
-
-
-
-* Cyber Risk \& Aspectos Legales: Transferencia de riesgo, pólizas de ciberriesgo, cumplimiento normativo y marcos de gobernanza (GRC).
-* Blue Team \& Análisis Técnico: Respuesta a incidentes, análisis forense de tráfico de red y detección de malware / ransomware.
-* Investigación \& Hardware: OSINT (Inteligencia de Fuentes Abiertas) y Electrónica general aplicada a la seguridad.
-
-
-
-\---
-
-
-
-##### 🔬 Laboratorios/Casos Prácticos
-
-
-
-**1. Bluesky Ransomware — Detección y Forense (CyberDefenders)**
-
-\* Categoría: DFIR / Análisis de Malware
-
-\* Objetivo: Investigación de un incidente provocado por el ransomware Bluesky, analizando evidencias de ejecución, mecanismos de persistencia y artefactos en el sistema impactado.
-
-\* Habilidades aplicadas: Análisis de logs, identificación de indicadores de compromiso (IoCs) y alcance de cifrado.
-
-
-
-\---
-
-
-
-**2. Packet Maze — Análisis Forense de Red (CyberDefenders)**
-
-\* Categoría: Network Forensics / Wireshark
-
-\* Objetivo: Inspección de capturas de tráfico (`.pcap`) para reconstruir comunicaciones maliciosas, extracción de payloads y detección de exfiltración de datos.
-
-\* Habilidades aplicadas: Protocolos de red (TCP/UDP, HTTP, DNS), filtrado avanzado en Wireshark y reconstrucción de sesiones.
-
-
-
-\---
-
-
-
-**3. Simple CTF — Análisis y Mapeo MITRE ATT\&CK (TryHackMe)**
-
-\* Categoría: Threat Modeling y/ Pentesting básico
-
-\* Objetivo: Explotación controlada y análisis de la cadena del ataque a través de la metodología MITRE ATT\&CK para comprender la perspectiva del adversario (Red to Blue).
-
-
-
-<h4>🗺️ Flujo Completo del Ataque (MITRE ATT\&CK)</h4>
-
-
-
-<table border="1">
-
-&#x20; <thead>
-
-&#x20;   <tr>
-
-&#x20;     <th>Fase del Ataque</th>
-
-&#x20;     <th>Táctica (MITRE)</th>
-
-&#x20;     <th>Técnica ID</th>
-
-&#x20;     <th>Descripción del Evento / Herramienta</th>
-
-&#x20;   </tr>
-
-&#x20; </thead>
-
-&#x20; <tbody>
-
-&#x20;   <tr>
-
-&#x20;     <td><b>Reconocimiento</b></td>
-
-&#x20;     <td>Reconnaissance</td>
-
-&#x20;     <td><code>T1595</code></td>
-
-&#x20;     <td>Escaneo de puertos y servicios con Nmap (FTP, HTTP, SSH)</td>
-
-&#x20;   </tr>
-
-&#x20;   <tr>
-
-&#x20;     <td><b>Búsqueda de Nombres</b></td>
-
-&#x20;     <td>Reconnaissance</td>
-
-&#x20;     <td><code>T1589.002</code></td>
-
-&#x20;     <td>Obtención del nombre de usuario objetivo (mitch)</td>
-
-&#x20;   </tr>
-
-&#x20;   <tr>
-
-&#x20;     <td><b>Enumeración Web</b></td>
-
-&#x20;     <td>Reconnaissance</td>
-
-&#x20;     <td><code>T1595.003</code></td>
-
-&#x20;     <td>Fuzzing con Gobuster para descubrir directorio /simple (CMS Made Simple)</td>
-
-&#x20;   </tr>
-
-&#x20;   <tr>
-
-&#x20;     <td><b>Explotación Web</b></td>
-
-&#x20;     <td>Initial Access</td>
-
-&#x20;     <td><code>T1190</code></td>
-
-&#x20;     <td>Explotación de vulnerabilidad SQL Injection (CVE-2019-9053) en el CMS</td>
-
-&#x20;   </tr>
-
-&#x20;   <tr>
-
-&#x20;     <td><b>Cracking de Contraseñas</b></td>
-
-&#x20;     <td>Credential Access</td>
-
-&#x20;     <td><code>T1110.002</code></td>
-
-&#x20;     <td>Uso de Hashcat para obtener la contraseña del hash extraído de la BD</td>
-
-&#x20;   </tr>
-
-&#x20;   <tr>
-
-&#x20;     <td><b>Acceso Vía SSH</b></td>
-
-&#x20;     <td>Lateral Movement</td>
-
-&#x20;     <td><code>T1021.004</code></td>
-
-&#x20;     <td>Conexión remota por SSH utilizando credenciales obtenidas (mitch)</td>
-
-&#x20;   </tr>
-
-&#x20;   <tr>
-
-&#x20;     <td><b>Descubrimiento de Sistema</b></td>
-
-&#x20;     <td>Discovery</td>
-
-&#x20;     <td><code>T1082</code></td>
-
-&#x20;     <td>Enumeración local de información del sistema y descubrimiento de usuario sunbath</td>
-
-&#x20;   </tr>
-
-&#x20;   <tr>
-
-&#x20;     <td><b>Escalado de Privilegios</b></td>
-
-&#x20;     <td>Privilege Escalation</td>
-
-&#x20;     <td><code>T1548.003</code></td>
-
-&#x20;     <td>Abuso de Sudo y Sudo Caching (ejecución de vim con privilegios root)</td>
-
-&#x20;   </tr>
-
-&#x20;   <tr>
-
-&#x20;     <td><b>Obtención de Shell Root</b></td>
-
-&#x20;     <td>Execution</td>
-
-&#x20;     <td><code>T1059.004</code></td>
-
-&#x20;     <td>Spawneo de una Unix Shell interactiva como usuario root para leer root.txt</td>
-
-&#x20;   </tr>
-
-&#x20; </tbody>
-
-</table>
-
-
-
-<br>
-
-
-
-<img src="../../assets/img/SIMPLE-CTFpedro.png" alt="Flujo MITRE Simple CTF">
-
-
-
-<br>
-
-
-
-\---
-
-
-
-##### 🛠️ Herramientas/Entornos
-
-\- Análisis \& Detección: Wireshark, CyberChef, herramientas OSINT.
-
-\- Marcos \& Metodologías: MITRE ATT\&CK, Gestión de Riesgos Cyber.
-
+<div class="profile-hero" markdown="1">
+
+# Pedro
+
+<span class="profile-role">[CYBER RISK / BLUE TEAM]</span>
+
+<p class="profile-bio">Analista en Ciberseguridad orientado a la defensa activa, gobernanza, normativas y gestión de riesgos informáticos (Cyber Risk Insurance). Interesado en la convergencia entre el análisis técnico de amenazas y la responsabilidad legal.</p>
+
+</div>
+
+## Perfil / Áreas de Interés
+
+<div class="profile-grid">
+  <article class="profile-card">
+    <span class="badge">GOVERNANCE / RISK</span>
+    <h3>Cyber Risk y aspectos legales</h3>
+    <p>Transferencia de riesgo, pólizas de ciberriesgo, cumplimiento normativo y marcos de gobernanza (GRC).</p>
+  </article>
+  <article class="profile-card">
+    <span class="badge">DEFENSIVE OPERATIONS</span>
+    <h3>Blue Team y análisis técnico</h3>
+    <p>Respuesta a incidentes, análisis forense de tráfico de red y detección de malware y ransomware.</p>
+  </article>
+  <article class="profile-card">
+    <span class="badge">OSINT / HARDWARE</span>
+    <h3>Investigación y hardware</h3>
+    <p>OSINT (Inteligencia de Fuentes Abiertas) y electrónica general aplicada a la seguridad.</p>
+  </article>
+</div>
+
+## Laboratorios / Casos Prácticos
+
+<div class="lab-grid">
+  <article class="lab-card">
+    <div class="lab-header">
+      <span class="badge">DFIR / Malware</span>
+      <h4>Bluesky Ransomware — Detección y Forense</h4>
+    </div>
+    <p class="lab-goal"><strong>Objetivo:</strong> Investigación de un incidente provocado por el ransomware Bluesky, analizando evidencias de ejecución, mecanismos de persistencia y artefactos en el sistema impactado.</p>
+    <div class="lab-tags">
+      <span class="lab-tag">Análisis de logs</span>
+      <span class="lab-tag">IoCs</span>
+      <span class="lab-tag">Cifrado</span>
+      <span class="lab-tag">CyberDefenders</span>
+    </div>
+  </article>
+
+  <article class="lab-card">
+    <div class="lab-header">
+      <span class="badge">Network Forensics / Wireshark</span>
+      <h4>Packet Maze — Análisis Forense de Red</h4>
+    </div>
+    <p class="lab-goal"><strong>Objetivo:</strong> Inspección de capturas de tráfico (<code>.pcap</code>) para reconstruir comunicaciones maliciosas, extraer payloads y detectar exfiltración de datos.</p>
+    <div class="lab-tags">
+      <span class="lab-tag">TCP / UDP</span>
+      <span class="lab-tag">HTTP / DNS</span>
+      <span class="lab-tag">Wireshark</span>
+      <span class="lab-tag">CyberDefenders</span>
+    </div>
+  </article>
+
+  <article class="lab-card lab-card--wide">
+    <div class="lab-header">
+      <span class="badge">Threat Modeling / TryHackMe</span>
+      <h4>Simple CTF — Análisis y mapeo MITRE ATT&amp;CK</h4>
+    </div>
+    <p class="lab-goal"><strong>Objetivo:</strong> Análisis controlado de la cadena de ataque con MITRE ATT&amp;CK para comprender las tácticas y técnicas desde una perspectiva defensiva.</p>
+    <div class="lab-tags">
+      <span class="lab-tag">MITRE ATT&amp;CK</span>
+      <span class="lab-tag">Threat modeling</span>
+      <span class="lab-tag">Análisis defensivo</span>
+    </div>
+
+    <h5>Flujo del ataque según MITRE ATT&amp;CK</h5>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Fase del ataque</th>
+            <th>Táctica (MITRE)</th>
+            <th>Técnica ID</th>
+            <th>Descripción del evento / herramienta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Reconocimiento</strong></td>
+            <td>Reconnaissance</td>
+            <td><code>T1595</code></td>
+            <td>Escaneo de puertos y servicios con Nmap (FTP, HTTP, SSH).</td>
+          </tr>
+          <tr>
+            <td><strong>Búsqueda de nombres</strong></td>
+            <td>Reconnaissance</td>
+            <td><code>T1589.002</code></td>
+            <td>Obtención del nombre de usuario objetivo (mitch).</td>
+          </tr>
+          <tr>
+            <td><strong>Enumeración web</strong></td>
+            <td>Reconnaissance</td>
+            <td><code>T1595.003</code></td>
+            <td>Fuzzing con Gobuster para descubrir el directorio /simple (CMS Made Simple).</td>
+          </tr>
+          <tr>
+            <td><strong>Acceso inicial web</strong></td>
+            <td>Initial Access</td>
+            <td><code>T1190</code></td>
+            <td>Explotación de una vulnerabilidad de SQL injection (CVE-2019-9053) en el CMS.</td>
+          </tr>
+          <tr>
+            <td><strong>Acceso a credenciales</strong></td>
+            <td>Credential Access</td>
+            <td><code>T1110.002</code></td>
+            <td>Uso de Hashcat para obtener la contraseña del hash extraído de la base de datos.</td>
+          </tr>
+          <tr>
+            <td><strong>Acceso vía SSH</strong></td>
+            <td>Lateral Movement</td>
+            <td><code>T1021.004</code></td>
+            <td>Conexión remota por SSH con las credenciales obtenidas (mitch).</td>
+          </tr>
+          <tr>
+            <td><strong>Descubrimiento del sistema</strong></td>
+            <td>Discovery</td>
+            <td><code>T1082</code></td>
+            <td>Enumeración local del sistema y descubrimiento del usuario sunbath.</td>
+          </tr>
+          <tr>
+            <td><strong>Escalado de privilegios</strong></td>
+            <td>Privilege Escalation</td>
+            <td><code>T1548.003</code></td>
+            <td>Abuso de sudo y sudo caching mediante la ejecución de vim con privilegios root.</td>
+          </tr>
+          <tr>
+            <td><strong>Shell root</strong></td>
+            <td>Execution</td>
+            <td><code>T1059.004</code></td>
+            <td>Inicio de una shell interactiva como root para acceder a root.txt.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <img src="../../assets/img/SIMPLE-CTFpedro.png" alt="Flujo MITRE ATT&amp;CK del laboratorio Simple CTF">
+  </article>
+</div>
+
+## Herramientas / Entornos
+
+- **Análisis y detección:** Wireshark, CyberChef y herramientas OSINT.
+- **Marcos y metodologías:** MITRE ATT&amp;CK y gestión de riesgos cibernéticos.

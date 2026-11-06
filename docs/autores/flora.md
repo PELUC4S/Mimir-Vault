@@ -1,25 +1,78 @@
-# Florencia Espeche | Analista SOC Junior / Blue Team
+<div class="profile-hero" markdown="1">
 
-Analista de seguridad defensiva con formación en ciberseguridad y desarrollo de software. Mi enfoque combina el triaje riguroso de incidentes bajo metodologías MITRE ATT&CK con análisis de anomalías en tráfico web/APIs y automatización de flujos de respuesta (SOAR) para optimizar tiempos de detección y contención.
+# Florencia Espeche
+
+<span class="profile-role">[BLUE TEAM / SOC L1]</span>
+
+<p class="profile-bio">Analista de seguridad defensiva con formación en ciberseguridad y desarrollo de software. Mi enfoque combina el triaje riguroso de incidentes bajo metodologías MITRE ATT&amp;CK con análisis de anomalías en tráfico web y APIs, y automatización de flujos de respuesta (SOAR) para optimizar tiempos de detección y contención.</p>
+
+</div>
 
 ## Stack técnico
 
-- Triaje L1, correlación y análisis de eventos.
-- Reducción de falsos positivos y detección de anomalías en APIs y aplicaciones web.
-- Playbooks de automatización (SOAR) y matrices de escalamiento.
+<div class="tech-pills">
+  <span class="tech-pill">L1 TRIAGE</span>
+  <span class="tech-pill">EVENT CORRELATION</span>
+  <span class="tech-pill">API ANOMALY DETECTION</span>
+  <span class="tech-pill">SOAR</span>
+</div>
 
-## SIEM y gestión de logs
+Reducción de falsos positivos, análisis de eventos y automatización de matrices de escalamiento.
 
-Wazuh, Splunk, Microsoft Sentinel y Elastic SIEM. Análisis de Windows Event Logs, Sysmon y logs de cortafuegos.
+## Especialidades operativas
 
-## EDR / XDR y endpoint
+<div class="profile-grid">
+  <article class="profile-card">
+    <span class="badge">DETECCIÓN / SIEM</span>
+    <h3>SIEM y gestión de logs</h3>
+    <p>Análisis de eventos de Windows y registros de cortafuegos.</p>
+    <div class="tech-pills">
+      <span class="tech-pill">WAZUH</span>
+      <span class="tech-pill">SPLUNK</span>
+      <span class="tech-pill">MICROSOFT SENTINEL</span>
+      <span class="tech-pill">ELASTIC SIEM</span>
+      <span class="tech-pill">WINDOWS EVENT LOGS</span>
+      <span class="tech-pill">SYSMON</span>
+    </div>
+  </article>
 
-Telemetría de procesos, aislamiento y contención, con nociones operativas en CrowdStrike Falcon, SentinelOne y Microsoft Defender for Endpoint.
+  <article class="profile-card">
+    <span class="badge">ENDPOINT / RESPONSE</span>
+    <h3>EDR / XDR y endpoint</h3>
+    <p>Uso de telemetría de procesos para apoyar el análisis, aislamiento y contención de endpoints.</p>
+    <div class="tech-pills">
+      <span class="tech-pill">CROWDSTRIKE FALCON</span>
+      <span class="tech-pill">SENTINELONE</span>
+      <span class="tech-pill">MICROSOFT DEFENDER</span>
+    </div>
+  </article>
 
-## Análisis de red y tráfico
+  <article class="profile-card">
+    <span class="badge">NETWORK / TRAFFIC</span>
+    <h3>Análisis de red y tráfico</h3>
+    <p>Inspección de tráfico con DevTools y Postman, y configuración de reglas básicas en firewalls.</p>
+    <div class="tech-pills">
+      <span class="tech-pill">WIRESHARK</span>
+      <span class="tech-pill">ZEEK</span>
+      <span class="tech-pill">SURICATA</span>
+      <span class="tech-pill">HTTP / REST</span>
+      <span class="tech-pill">TCP/IP</span>
+      <span class="tech-pill">DNS</span>
+      <span class="tech-pill">VPN</span>
+      <span class="tech-pill">FORTINET</span>
+      <span class="tech-pill">PALO ALTO</span>
+    </div>
+  </article>
 
-Wireshark, Zeek y Suricata; inspección HTTP/REST con DevTools y Postman; protocolos TCP/IP, DNS y VPN; y reglas básicas en firewalls Fortinet y Palo Alto.
-
-## Frameworks y metodologías
-
-MITRE ATT&CK, Cyber Kill Chain, buenas prácticas ITIL y OWASP Top 10, con enfoque en APIs.
+  <article class="profile-card">
+    <span class="badge">FRAMEWORKS / PROCESS</span>
+    <h3>Frameworks y metodologías</h3>
+    <p>Metodologías de análisis y buenas prácticas con enfoque en APIs.</p>
+    <div class="tech-pills">
+      <span class="tech-pill">MITRE ATT&amp;CK</span>
+      <span class="tech-pill">CYBER KILL CHAIN</span>
+      <span class="tech-pill">ITIL</span>
+      <span class="tech-pill">OWASP TOP 10</span>
+    </div>
+  </article>
+</div>

@@ -5,13 +5,17 @@ site_url: https://peluc4s.github.io/Mimir-Vault/
 markdown_extensions:
   - tables
   - attr_list
+  - md_in_html
 
 theme:
   name: material
+  custom_dir: docs/overrides
+  font:
+    text: Inter
+    code: JetBrains Mono
   palette:
-    # Modo oscuro por defecto (estilo Hacker / SOC)
     scheme: slate
-    primary: blue grey
+    primary: green
     accent: cyan
   features:
     - navigation.tabs
@@ -21,6 +25,8 @@ theme:
     - content.code.copy
 extra_css:
   - stylesheets/extra.css
+extra:
+  generator: false
 # Estructura del menú lateral (Navegación)
 nav:
   - Inicio: index.md
@@ -33,4 +39,4 @@ nav:
       - Gabriel: autores/gabrielini.md
   - Laboratorios SOC:
       - Análisis de Logs: labs/analisis-logs.md
-      - Reglas Sigma: labs/reglas-sigma.md
+      - Reglas Sigma: labs/labsreglas-sigma.md
