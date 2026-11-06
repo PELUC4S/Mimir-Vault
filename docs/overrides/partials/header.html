@@ -1,0 +1,22 @@
+{% set class = "md-header" %}
+{% if "navigation.tabs.sticky" in features %}
+  {% set class = class ~ " md-header--shadow md-header--lifted" %}
+{% elif "navigation.tabs" not in features %}
+  {% set class = class ~ " md-header--shadow" %}
+{% endif %}
+<header class="{{ class }}" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+    <div class="md-header__title" data-md-component="header-title">
+      <span class="md-ellipsis"><span class="brand-name">MIMIR-VAULT</span> <span class="brand-divider">//</span> <span class="brand-label">SOC_LAB</span></span>
+    </div>
+    {% if "material/search" in config.plugins %}
+      {% set search = config.plugins["material/search"] | attr("config") %}
+      {% if search.enabled %}
+        {% include "partials/search.html" %}
+      {% endif %}
+    {% endif %}
+  </nav>
+  {% if "navigation.tabs.sticky" in features and "navigation.tabs" in features %}
+    {% include "partials/tabs.html" %}
+  {% endif %}
+</header>
