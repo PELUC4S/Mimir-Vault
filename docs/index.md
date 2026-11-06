@@ -4,8 +4,6 @@
 
 Este espacio nace de una convicción muy clara: **la verdadera ciberseguridad no solo se lee, se construye.** Decidimos tomar las riendas de nuestro propio aprendizaje y dar el salto de la teoría a la práctica, pasando de la lectura pasiva al *"hands-on"* continuo.
 
----
-
 ## Qué vas a encontrar acá
 
 En este sitio documentamos nuestro viaje técnico paso a paso:
@@ -33,13 +31,10 @@ En este sitio documentamos nuestro viaje técnico paso a paso:
   </article>
 </div>
 
----
-
 ## Nuestra Filosofía
 
 Creemos firmemente que el aprendizaje técnico más sólido se da en equipo, experimentando, rompiendo cosas en entornos controlados, solucionándolas y, sobre todo, **divirtiéndonos y riéndonos un rato en el proceso**. 
 
 Te invitamos a explorar el menú superior para conocer nuestras publicaciones y laboratorios. ¡Gracias por pasar por acá!
 
----
 > *"De la lectura pasiva a la práctica activa."*
