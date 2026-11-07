@@ -737,6 +737,11 @@ article.md-content__inner {
 }
 
 @media (max-width: 768px) {
+  .md-header {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
   .md-header__inner {
     display: flex;
     height: 52px;
@@ -846,8 +851,10 @@ article.md-content__inner {
     z-index: 50;
     width: auto;
     max-height: calc(100vh - 7.5rem);
+    max-height: calc(100dvh - 7.5rem);
     overflow-y: auto;
     overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   .md-tabs__list {
