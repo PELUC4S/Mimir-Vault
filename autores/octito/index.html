@@ -27,7 +27,7 @@
     
     
       
-        <title>Octito - Blog & Laboratorios de Ciberseguridad</title>
+        <title>Octavio Estevez - Ciberseguridad</title>
       
     
     
@@ -50,6 +50,71 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <style>
+          .octavio-hero {
+            position: relative;
+            overflow: hidden;
+            margin: 0 0 2rem;
+            padding: 1.5rem 1.75rem;
+            border: 1px solid rgba(0, 229, 255, .35);
+            border-radius: .75rem;
+            background: linear-gradient(135deg, rgba(0, 229, 255, .1), rgba(24, 32, 46, .2));
+            animation: octavio-appear .7s ease-out both;
+          }
+          .octavio-hero::after {
+            position: absolute;
+            top: 0;
+            left: -40%;
+            width: 35%;
+            height: 2px;
+            background: #00e5ff;
+            box-shadow: 0 0 12px #00e5ff;
+            content: "";
+            animation: octavio-scan 5s ease-in-out infinite;
+          }
+          .octavio-hero__tag {
+            display: flex;
+            align-items: center;
+            gap: .55rem;
+            margin: 0 0 .4rem;
+            color: var(--md-accent-fg-color);
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+          }
+          .octavio-hero__status {
+            width: .55rem;
+            height: .55rem;
+            border-radius: 50%;
+            background: #00e5a8;
+            box-shadow: 0 0 10px rgba(0, 229, 168, .8);
+            animation: octavio-pulse 2s ease-in-out infinite;
+          }
+          .octavio-hero h1 {
+            margin: 0 0 .5rem;
+          }
+          .octavio-hero p:last-child {
+            margin-bottom: 0;
+          }
+          @keyframes octavio-appear {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          @keyframes octavio-scan {
+            0%, 15% { left: -40%; }
+            65%, 100% { left: 110%; }
+          }
+          @keyframes octavio-pulse {
+            50% { opacity: .45; box-shadow: 0 0 3px rgba(0, 229, 168, .45); }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .octavio-hero,
+            .octavio-hero::after,
+            .octavio-hero__status {
+              animation: none;
+            }
+          }
+        </style>
       
     
     
@@ -105,7 +170,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Octito
+             Octavio Estevez
             
           </span>
         </div>
@@ -401,8 +466,7 @@
   <span class="md-ellipsis">
     
   
-    Octito
-  
+    Octavio Estevez
 
     
   </span>
@@ -683,8 +747,56 @@
 
 
 
-  <h1>Octito</h1>
+  <section class="octavio-hero" aria-label="Presentación de Octavio Estevez">
+    <p class="octavio-hero__tag"><span class="octavio-hero__status" aria-hidden="true"></span>CIBERSEGURIDAD · DERECHO</p>
+    <h1>Octavio Estevez</h1>
+    <p>Soy Octavio, apasionado de la ciberseguridad y del Derecho. Me interesa comprender la relación entre ambas disciplinas y profundizar en cada una de ellas de manera integral, con el objetivo de seguir aprendiendo y creciendo en el campo técnico y legal.</p>
+  </section>
 
+  <h2>PROYECTOS TÉCNICOS</h2>
+
+  <p><strong>Laboratorio Personal de Soporte IT y Seguridad | Administrador e Investigador Autónomo</strong></p>
+
+  <ul>
+    <li>Desplegué entornos virtuales (VMware, VirtualBox) para simular arquitecturas de red y auditar configuraciones Windows/Linux.</li>
+    <li>Ejecuté análisis de tráfico con Wireshark y Nmap, identificando anomalías y mitigando vectores de ataque simulados.</li>
+    <li>Administré políticas de control de accesos y gestión de identidades mediante Active Directory.</li>
+    <li>Configuré topologías de enrutamiento y redes inalámbricas orientadas a seguridad del tráfico.</li>
+  </ul>
+
+  <h2>HABILIDADES Y TECNOLOGÍAS</h2>
+
+  <p><strong>Ciberseguridad y Redes:</strong> Análisis de vulnerabilidades, monitoreo de amenazas, seguridad de redes, direccionamiento IP, enrutamiento.</p>
+  <p><strong>Herramientas:</strong> Wireshark, Nmap, Active Directory, VMware, VirtualBox.</p>
+  <p><strong>Sistemas Operativos:</strong> Windows, Linux.</p>
+  <p><strong>Ofimática:</strong> Microsoft Word, Excel, PowerPoint.</p>
+  <p><strong>Competencias Legales:</strong> Derecho informático, análisis normativo, legislación tecnológica.</p>
+  <p><strong>Idiomas:</strong> Español (Nativo), Inglés (A2 - Básico).</p>
+
+  <h2>EDUCACIÓN Y CERTIFICACIONES</h2>
+
+  <p><strong>Educación Formal</strong></p>
+
+  <ul>
+    <li>Tecnicatura en Ciberseguridad (En curso) | Universidad Provincial de Córdoba (2026 - Presente).</li>
+    <li>Abogacía (En curso) | Universidad Nacional de Córdoba (2024 - Presente).</li>
+    <li>Bachillerato en Ciencias Naturales | IPEM 206 Fernando Fader (2018 - 2023).</li>
+  </ul>
+
+  <p><strong>Certificaciones Técnicas</strong></p>
+
+  <ul>
+    <li>Soporte y Seguridad en la Red | Cisco Networking Academy.</li>
+    <li>Introducción a la Ciberseguridad | Cisco Networking Academy.</li>
+    <li>Conceptos Básicos de Redes | Cisco Networking Academy - Gobierno de Córdoba.</li>
+  </ul>
+
+  <p><strong>Formación Complementaria</strong></p>
+
+  <ul>
+    <li>Certificación en Promotores del Desarrollo Personal y Liderazgo | Legislatura de Córdoba (2025).</li>
+    <li>3er Congreso Nacional de Derecho y Tecnología (2025).</li>
+  </ul>
 
 
 
