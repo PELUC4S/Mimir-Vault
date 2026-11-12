@@ -9,12 +9,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <span class="md-ellipsis"><span class="brand-icon" aria-hidden="true">🛡️</span><span class="brand-name">MIMIR-VAULT</span> <span class="brand-divider">//</span> <span class="brand-label">SOC_LAB</span></span>
     </div>
-    {% if "material/search" in config.plugins %}
-      {% set search = config.plugins["material/search"] | attr("config") %}
-      {% if search.enabled %}
-        {% include "partials/search.html" %}
-      {% endif %}
-    {% endif %}
+    {% include "partials/search.html" %}
   </nav>
   {% if "navigation.tabs.sticky" in features and "navigation.tabs" in features %}
     {% include "partials/tabs.html" %}
