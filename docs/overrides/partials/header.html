@@ -9,7 +9,19 @@
     <div class="md-header__title" data-md-component="header-title">
       <span class="md-ellipsis"><span class="brand-icon" aria-hidden="true">🛡️</span><span class="brand-name">MIMIR-VAULT</span> <span class="brand-divider">//</span> <span class="brand-label">SOC_LAB</span></span>
     </div>
-    {% include "partials/search.html" %}
+    <div class="mv-search" data-search-index="{{ 'search.json' | url }}">
+      <label class="md-visually-hidden" for="mv-site-search">Buscar en el sitio</label>
+      <div class="mv-search__control">
+        <svg class="mv-search__icon" aria-hidden="true" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-4-4"></path>
+        </svg>
+        <input id="mv-site-search" class="mv-search__input" type="text" role="combobox" aria-label="Buscar en el sitio" aria-autocomplete="list" aria-controls="mv-search-results" aria-expanded="false" placeholder="Buscar..." autocomplete="off" spellcheck="false">
+        <button class="mv-search__clear" type="button" aria-label="Limpiar búsqueda" hidden>×</button>
+      </div>
+      <div id="mv-search-results" class="mv-search__results" role="listbox" aria-label="Resultados de búsqueda" hidden></div>
+      <p class="md-visually-hidden" data-search-status role="status" aria-live="polite"></p>
+    </div>
   </nav>
   {% if "navigation.tabs.sticky" in features and "navigation.tabs" in features %}
     {% include "partials/tabs.html" %}
