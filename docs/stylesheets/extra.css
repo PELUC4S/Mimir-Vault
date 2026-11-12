@@ -345,7 +345,19 @@ body :where(*)::after {
 }
 
 .md-tabs__section-title::after {
-  content: "⌄";
+  width: .45rem;
+  height: .45rem;
+  margin: -.25rem 0 0 .15rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  content: "";
+  transform: rotate(45deg);
+  transition: transform .2s ease;
+}
+
+.md-tabs__dropdown[open] .md-tabs__section-title::after {
+  margin-top: .2rem;
+  transform: rotate(225deg);
 }
 
 .md-tabs__section-title:focus-visible,
@@ -356,14 +368,17 @@ body :where(*)::after {
 }
 
 .md-tabs__submenu {
-  position: absolute;
-  top: calc(100% + .35rem);
+  position: fixed;
+  top: 0;
   left: 0;
-  z-index: 40;
+  z-index: 100;
   display: none;
-  min-width: 13rem;
+  width: min(20rem, calc(100vw - 2rem));
+  max-height: min(65vh, 30rem);
+  max-height: min(65dvh, 30rem);
   padding: .45rem;
   margin: 0;
+  overflow-y: auto;
   background: var(--mv-surface);
   border: 1px solid var(--mv-border);
   box-shadow: 0 12px 28px rgb(0 0 0 / 30%);
@@ -371,6 +386,27 @@ body :where(*)::after {
 }
 
 .md-tabs__dropdown[open] .md-tabs__submenu {
+  display: block;
+}
+
+.md-tabs--no-popover .md-tabs__section {
+  height: auto;
+}
+
+.md-tabs--no-popover .md-tabs__dropdown[open] {
+  height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.md-tabs--no-popover .md-tabs__submenu {
+  position: static;
+  display: none;
+  width: min(20rem, calc(100vw - 2rem));
+  max-height: min(65vh, 30rem);
+}
+
+.md-tabs--no-popover .md-tabs__dropdown[open] .md-tabs__submenu {
   display: block;
 }
 
@@ -820,40 +856,17 @@ article.md-content__inner {
     justify-content: flex-start;
     width: 100%;
     padding: 0 1rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .md-tabs .md-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .md-tabs__submenu {
-    position: fixed !important;
-    top: calc(52px + 49px + .35rem);
-    right: 1rem;
-    left: 1rem;
-    z-index: 50;
-    width: auto;
-    max-height: calc(100vh - 7.5rem);
-    max-height: calc(100dvh - 7.5rem);
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
+    overflow: visible;
   }
 
   .md-tabs__list {
-    width: max-content;
-    min-width: 100%;
+    width: 100%;
+    min-width: 0;
     margin-left: 0;
     align-items: center;
-    gap: 1rem;
-    flex-wrap: nowrap;
+    gap: .25rem .5rem;
+    flex-wrap: wrap;
     justify-content: flex-start;
-    white-space: nowrap;
   }
 
   .md-tabs__list > .md-tabs__item {
