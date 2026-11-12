@@ -89,8 +89,14 @@ body :where(*)::after {
   color: var(--mv-muted);
 }
 
-.md-header label[for="__drawer"],
-.md-sidebar--primary {
+@media (min-width: 769px) {
+  .md-header label[for="__drawer"],
+  .md-sidebar--primary {
+    display: none !important;
+  }
+}
+
+.md-sidebar--secondary {
   display: none !important;
 }
 
