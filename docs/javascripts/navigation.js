@@ -4,7 +4,7 @@
 
   const dropdowns = [...navigation.querySelectorAll(".md-tabs__dropdown")];
   if (typeof HTMLElement.prototype.showPopover !== "function") {
-    navigation.classList.add("mv-tabs--no-popover");
+    navigation.classList.add("md-tabs--no-popover");
     return;
   }
 
