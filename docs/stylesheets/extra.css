@@ -253,9 +253,9 @@ body :where(*)::after {
   min-width: 0;
   margin: 0 !important;
   padding: 0 !important;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   overflow: visible;
-  white-space: normal;
+  white-space: nowrap;
   contain: none;
 }
 
@@ -276,13 +276,20 @@ body :where(*)::after {
   align-items: center;
   height: 48px;
   min-height: 48px;
+  max-height: 48px;
   white-space: nowrap;
+  overflow: visible;
 }
 
 .md-tabs__dropdown {
   position: relative;
   display: flex;
   align-items: center;
+  height: 48px;
+  overflow: visible;
+}
+
+.md-tabs__dropdown[open] {
   height: 48px;
 }
 
@@ -390,17 +397,19 @@ body :where(*)::after {
 }
 
 .md-tabs--no-popover .md-tabs__section {
-  height: auto;
+  height: 48px;
 }
 
 .md-tabs--no-popover .md-tabs__dropdown[open] {
-  height: auto;
-  flex-direction: column;
-  align-items: flex-start;
+  height: 48px;
+  flex-direction: row;
+  align-items: center;
 }
 
 .md-tabs--no-popover .md-tabs__submenu {
-  position: static;
+  position: absolute;
+  top: 100%;
+  left: 0;
   display: none;
   width: min(20rem, calc(100vw - 2rem));
   max-height: min(65vh, 30rem);
@@ -865,8 +874,9 @@ article.md-content__inner {
     margin-left: 0;
     align-items: center;
     gap: .25rem .5rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
+    overflow-x: auto;
   }
 
   .md-tabs__list > .md-tabs__item {
