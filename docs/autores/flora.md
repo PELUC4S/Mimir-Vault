@@ -19,7 +19,7 @@
   <span class="tech-pill">SCRIPTING / PLAYBOOKS</span>
 </div>
 
-Clasificación inicial de alertas, descarte de falsos positivos, escalamiento documentado a Nivel 2 y soporte operativo a usuarios.
+Enfocada en el monitoreo de alertas, diagnóstico de incidencias en primer contacto y documentación técnica estructurada. Clasificación inicial de alertas, descarte de falsos positivos, escalamiento documentado a Nivel 2 y soporte operativo a usuarios.
 
 ## Especialidades operativas
 
