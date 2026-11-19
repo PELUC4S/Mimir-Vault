@@ -1,65 +1,46 @@
-<div class="profile-hero" markdown="1">
 
 <div style="text-align: center; margin-bottom: 1.75rem;">
   <img src="../assets/img/nasa-space-apps-logo.png" alt="NASA Space Apps Challenge" style="max-width: 440px; width: 100%; height: auto; filter: drop-shadow(0 0 14px rgba(56, 189, 248, 0.25));">
 </div>
 
-# Peluc4s to the <span class="title-highlight">Moon</span>
+<h1>Peluc4s to the <span class="title-highlight">Moon</span></h1>
 
-<span class="badge">NASA SPACE APPS CHALLENGE · DEVSECOPS · AUDITORÍA IA</span>
-
-<p class="profile-bio">Durante el Space Apps Challenge nos propusimos resolver un problema real usando las APIs de la NASA. Como estudiantes de ciberseguridad (Universidad Provincial de Córdoba), decidimos aprovechar la ocasión para practicar algo que suele quedar en segundo plano: diseñar software pensando en la seguridad desde el principio, no como un paso posterior.</p>
-
-<div class="tech-pills">
-  <span class="tech-pill">NASA POWER API</span>
-  <span class="tech-pill">FASTAPI</span>
-  <span class="tech-pill">DEVSECOPS</span>
-  <span class="tech-pill">OWASP TOP 10</span>
-  <span class="tech-pill">HARDENING</span>
-  <span class="tech-pill">AI SECURITY</span>
-</div>
-
-</div>
+Durante el Space Apps Challenge nos propusimos resolver un problema real usando las APIs de la NASA. Como estudiantes de ciberseguridad (Universidad Provincial de Córdoba), decidimos aprovechar la ocasión para practicar algo que suele quedar en segundo plano: diseñar software pensando en la seguridad desde el principio, no como un paso posterior.
 
 Para avanzar más rápido con el desarrollo, usamos asistentes de IA para generar parte del código. Nos interesaba saber qué tan seguro era ese código cuando lo pedíamos de la forma más habitual: describiendo las funcionalidades que queríamos en la aplicación, sin incluir requisitos de seguridad en los prompts.
 
 Trabajamos con Gemini Flash en VS Code y Antigravity. Al revisar el código generado, encontramos muchas vulnerabilidades. En las siguientes secciones mostramos cada una: el código tal como apareció, por qué representaba un riesgo y cómo lo corregimos.
 
 <div class="lab-grid">
-  <article class="lab-card">
-    <span class="badge">CHALLENGE</span>
-    <div class="lab-header">
-      <h3>Problema Oficial</h3>
-    </div>
-    <p class="lab-goal">Desafío global de la NASA para la adaptación agrícola mediante datos satelitales.</p>
-    <p><a href="https://www.spaceappschallenge.org/2026/challenges/adapting-farms-with-nasa-data/" target="_blank" rel="noopener">Adapting farms with nasa data/ ↗</a></p>
-  </article>
+<article class="lab-card">
+<span class="badge">CHALLENGE</span>
+<div class="lab-header">
+<h3>Problema Oficial</h3>
+</div>
+<p class="lab-goal">Desafío global de la NASA para la adaptación de cultivos y gestión agroclimática mediante datos satelitales.</p>
+<div class="tech-pills" style="margin-bottom: 1.25rem;">
+</div>
+<a href="https://www.spaceappschallenge.org/2026/challenges/adapting-farms-with-nasa-data/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: auto; padding: 0.45rem 0.85rem; color: #38bdf8; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-decoration: none; width: fit-content;">
+<span>Adapting Farms with NASA Data ↗</span>
+</a>
+</article>
 
-  <article class="lab-card">
-    <span class="badge">REPOSITORY</span>
-    <div class="lab-header">
-      <h3>Solución Técnica</h3>
-    </div>
-    <p class="lab-goal">Implementación completa de FieldShift: backend, algoritmos de rotación y mitigaciones.</p>
-    <p><a href="https://github.com/PELUC4S/FieldShift" target="_blank" rel="noopener">github.com/PELUC4S/FieldShift ↗</a></p>
-  </article>
+<article class="lab-card">
+<span class="badge">REPOSITORY</span>
+<div class="lab-header">
+<h3>Solución Técnica</h3>
+</div>
+<p class="lab-goal">Implementación completa, algoritmos de rotación de cultivos y mitigaciones de seguridad.</p>
+<div class="tech-pills" style="margin-bottom: 1.25rem;">
+</div>
+<a href="https://github.com/PELUC4S/FieldShift" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.55rem; margin-top: auto; padding: 0.45rem 0.85rem; color: #38bdf8; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-decoration: none; width: fit-content;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+<span>PELUC4S / FieldShift ↗</span>
+</a>
+</article>
 </div>
 
-<figure style="margin: 2.25rem 0 2rem; text-align: center;">
-  <img src="../assets/img/hackathon-equipo-peluc4s.jpg" alt="Equipo Peluc4s durante la jornada del NASA Space Apps Challenge" style="width: 100%; max-width: 880px; border: 1px solid var(--mv-border); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45); display: block; margin: 0 auto;">
-  <figcaption style="margin-top: 0.65rem; color: var(--mv-muted); font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em;">
-    El equipo de Peluc4s.
-  </figcaption>
-</figure>
-
-<figure style="margin: 2.25rem 0 2rem; text-align: center;">
-  <img src="../assets/img/hackathon-equipo-peluc4s.jpg" alt="Equipo Peluc4s durante la jornada del NASA Space Apps Challenge" style="width: 100%; max-width: 880px; border: 1px solid var(--mv-border); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45); display: block; margin: 0 auto;">
-  <figcaption style="margin-top: 0.65rem; color: var(--mv-muted); font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em;">
-    El equipo de Peluc4s y participantes durante la jornada intensiva del NASA Space Apps Challenge en la Universidad Provincial de Córdoba (UPC).
-  </figcaption>
-</figure>
-
----
+## Vulnerabilidades encontradas
 
 ### 1. Mitigar Vulnerabilidades CORS (Cross-Origin Resource Sharing)
 
@@ -468,3 +449,10 @@ Garantiza despliegues 100% deterministas y reproducibles. El servidor instalará
 | **20** | **Sacar admin y debug** | Sí | 🛡️ Implementado | La documentación interactiva de Swagger (`/docs`, `/redoc` y `/openapi.json`) se desactiva automáticamente cuando se detecta el entorno de producción (`ENVIRONMENT=production` o `RENDER=true`), manteniéndola disponible solo para desarrollo local. |
 
 </div>
+
+<figure style="margin: 3rem auto 1.5rem; text-align: center; max-width: 520px;">
+  <img src="../assets/img/hackathon-equipo-peluc4s.jpg" alt="Equipo Peluc4s durante la jornada del NASA Space Apps Challenge" style="width: 100%; height: auto; border: 1px solid var(--mv-border); border-radius: 6px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45); display: block; margin: 0 auto;">
+  <figcaption style="margin-top: 0.75rem; color: var(--mv-muted); font-size: 0.85rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em; text-align: center;">
+    El equipo de Peluc4s
+  </figcaption>
+</figure>
