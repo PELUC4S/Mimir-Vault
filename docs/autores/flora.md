@@ -81,3 +81,17 @@ Enfocada en el monitoreo de alertas, diagnóstico de incidencias en primer conta
   </article>
 
 </div>
+
+## Proyectos
+
+<div class="profile-grid">
+  <article class="profile-card" style="grid-column: 1 / -1;">
+    <span class="badge">DEVSECOPS / HACKATHON</span>
+    <h3>NASA Space Apps Challenge</h3>
+    <p>Desarrollo y aseguramiento defensivo de la API AgTech <strong>FieldShift</strong> basada en NASA POWER. Auditoría de código asistido por IA, mitigación de vulnerabilidades críticas (CORS, DoS, DOM XSS, Rate Limiting, Parameter Tampering) e implementación de controles de seguridad.</p>
+
+    <a href="../labs/nasa-hackaton.md" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: auto; padding: 0.45rem 0.85rem; color: #38bdf8; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-decoration: none; width: fit-content;">
+      <span>Ver Laboratorio del Hackathon ↗</span>
+    </a>
+  </article>
+</div>

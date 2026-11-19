@@ -41,6 +41,4 @@ nav:
       - Ignacio: autores/nachoide.md
       - Gabriel: autores/gabrielini.md
   - Laboratorios SOC:
-      - Análisis de Logs: labs/analisis-logs.md
-      - Reglas Sigma: labs/labsreglas-sigma.md
       - Nasa Hackaton: labs/nasa-hackaton.md
