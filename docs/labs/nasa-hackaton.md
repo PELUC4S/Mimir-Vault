@@ -5,11 +5,25 @@
 
 <h1>Peluc4s to the <span class="title-highlight">Moon</span></h1>
 
+<div class="tech-pills" style="margin-bottom: 1.5rem; gap: 0.45rem;">
+  <span class="tech-pill">FASTAPI</span>
+  <span class="tech-pill">PYTHON</span>
+  <span class="tech-pill">PYDANTIC</span>
+  <span class="tech-pill">PIP-AUDIT</span>
+  <span class="tech-pill">BANDIT</span>
+  <span class="tech-pill">SEMGREP</span>
+  <span class="tech-pill">OWASP TOP 10</span>
+  <span class="tech-pill">DEVSECOPS</span>
+  <span class="tech-pill">NASA POWER API</span>
+  <span class="tech-pill">RENDER</span>
+  <span class="tech-pill">GITHUB ACTIONS</span>
+</div>
+
 Durante el Space Apps Challenge nos propusimos resolver un problema real usando las APIs de la NASA. Como estudiantes de ciberseguridad (Universidad Provincial de Córdoba), decidimos aprovechar la ocasión para practicar algo que suele quedar en segundo plano: diseñar software pensando en la seguridad desde el principio, no como un paso posterior.
 
 Para avanzar más rápido con el desarrollo, usamos asistentes de IA para generar parte del código. Nos interesaba saber qué tan seguro era ese código cuando lo pedíamos de la forma más habitual: describiendo las funcionalidades que queríamos en la aplicación, sin incluir requisitos de seguridad en los prompts.
 
-Trabajamos con Gemini Flash en VS Code y Antigravity. Al revisar el código generado, encontramos muchas vulnerabilidades. En las siguientes secciones mostramos cada una: el código tal como apareció, por qué representaba un riesgo y cómo lo corregimos.
+Trabajamos con Gemini Flash en VS Code y Antigravity. Al auditar el código generado con herramientas de seguridad como **pip-audit** (análisis de dependencias), **Bandit** (SAST en Python), **Semgrep** (detección de DOM XSS) y pruebas dinámicas con **curl**, identificamos múltiples vulnerabilidades. En las siguientes secciones mostramos cada una: el código tal como apareció, por qué representaba un riesgo y cómo lo corregimos.
 
 <div class="lab-grid">
 <article class="lab-card">
@@ -19,6 +33,10 @@ Trabajamos con Gemini Flash en VS Code y Antigravity. Al revisar el código gene
 </div>
 <p class="lab-goal">Desafío global de la NASA para la adaptación de cultivos y gestión agroclimática mediante datos satelitales.</p>
 <div class="tech-pills" style="margin-bottom: 1.25rem;">
+  <span class="tech-pill">NASA POWER API</span>
+  <span class="tech-pill">SOILGRIDS REST</span>
+  <span class="tech-pill">AGROCLIMATOLOGÍA</span>
+  <span class="tech-pill">OPEN DATA</span>
 </div>
 <a href="https://www.spaceappschallenge.org/2026/challenges/adapting-farms-with-nasa-data/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-top: auto; padding: 0.45rem 0.85rem; color: #38bdf8; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-decoration: none; width: fit-content;">
 <span>Adapting Farms with NASA Data ↗</span>
@@ -32,6 +50,12 @@ Trabajamos con Gemini Flash en VS Code y Antigravity. Al revisar el código gene
 </div>
 <p class="lab-goal">Implementación completa, algoritmos de rotación de cultivos y mitigaciones de seguridad.</p>
 <div class="tech-pills" style="margin-bottom: 1.25rem;">
+  <span class="tech-pill">FASTAPI</span>
+  <span class="tech-pill">PYDANTIC</span>
+  <span class="tech-pill">PIP-AUDIT</span>
+  <span class="tech-pill">BANDIT</span>
+  <span class="tech-pill">SEMGREP</span>
+  <span class="tech-pill">DEVSECOPS</span>
 </div>
 <a href="https://github.com/PELUC4S/FieldShift" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.55rem; margin-top: auto; padding: 0.45rem 0.85rem; color: #38bdf8; background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-decoration: none; width: fit-content;">
 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
