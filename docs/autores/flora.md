@@ -4,7 +4,7 @@
 
 <span class="profile-role">[JUNIOR SOC L1 / IT SUPPORT]</span>
 
-<p class="profile-bio">Analista Junior de seguridad defensiva y soporte técnico con formación en ciberseguridad, redes y desarrollo de software.</p>
+<p class="profile-bio">Analista Junior de seguridad defensiva y soporte técnico con formación en ciberseguridad, redes y desarrollo de software. Enfocada en el monitoreo de alertas, diagnóstico de incidencias en primer contacto y documentación técnica estructurada.</p>
 
 </div>
 
