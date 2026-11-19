@@ -4,26 +4,15 @@
   <img src="../assets/img/nasa-space-apps-logo.png" alt="NASA Space Apps Challenge" style="max-width: 440px; width: 100%; height: auto; filter: drop-shadow(0 0 14px rgba(56, 189, 248, 0.25));">
 </div>
 
-# Peluc4s to the <span class="title-highlight">Moon</span>
-
-<span class="badge">NASA SPACE APPS CHALLENGE · DEVSECOPS · AUDITORÍA IA</span>
+## Peluc4s to the <span class="title-highlight">Moon</span>
 
 <p class="profile-bio">Durante el Space Apps Challenge nos propusimos resolver un problema real usando las APIs de la NASA. Como estudiantes de ciberseguridad (Universidad Provincial de Córdoba), decidimos aprovechar la ocasión para practicar algo que suele quedar en segundo plano: diseñar software pensando en la seguridad desde el principio, no como un paso posterior.</p>
 
-<div class="tech-pills">
-  <span class="tech-pill">NASA POWER API</span>
-  <span class="tech-pill">FASTAPI</span>
-  <span class="tech-pill">DEVSECOPS</span>
-  <span class="tech-pill">OWASP TOP 10</span>
-  <span class="tech-pill">HARDENING</span>
-  <span class="tech-pill">AI SECURITY</span>
 </div>
 
-</div>
+<p>Para avanzar más rápido con el desarrollo, usamos asistentes de IA para generar parte del código. Nos interesaba saber qué tan seguro era ese código cuando lo pedíamos de la forma más habitual: describiendo las funcionalidades que queríamos en la aplicación, sin incluir requisitos de seguridad en los prompts.</p>
 
-Para avanzar más rápido con el desarrollo, usamos asistentes de IA para generar parte del código. Nos interesaba saber qué tan seguro era ese código cuando lo pedíamos de la forma más habitual: describiendo las funcionalidades que queríamos en la aplicación, sin incluir requisitos de seguridad en los prompts.
-
-Trabajamos con Gemini Flash en VS Code y Antigravity. Al revisar el código generado, encontramos muchas vulnerabilidades. En las siguientes secciones mostramos cada una: el código tal como apareció, por qué representaba un riesgo y cómo lo corregimos.
+<p>Trabajamos con Gemini Flash en VS Code y Antigravity. Al revisar el código generado, encontramos muchas vulnerabilidades. En las siguientes secciones mostramos cada una: el código tal como apareció, por qué representaba un riesgo y cómo lo corregimos.</p>
 
 <div class="lab-grid">
   <article class="lab-card">
@@ -49,13 +38,6 @@ Trabajamos con Gemini Flash en VS Code y Antigravity. Al revisar el código gene
   <img src="../assets/img/hackathon-equipo-peluc4s.jpg" alt="Equipo Peluc4s durante la jornada del NASA Space Apps Challenge" style="width: 100%; max-width: 880px; border: 1px solid var(--mv-border); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45); display: block; margin: 0 auto;">
   <figcaption style="margin-top: 0.65rem; color: var(--mv-muted); font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em;">
     El equipo de Peluc4s.
-  </figcaption>
-</figure>
-
-<figure style="margin: 2.25rem 0 2rem; text-align: center;">
-  <img src="../assets/img/hackathon-equipo-peluc4s.jpg" alt="Equipo Peluc4s durante la jornada del NASA Space Apps Challenge" style="width: 100%; max-width: 880px; border: 1px solid var(--mv-border); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45); display: block; margin: 0 auto;">
-  <figcaption style="margin-top: 0.65rem; color: var(--mv-muted); font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em;">
-    El equipo de Peluc4s y participantes durante la jornada intensiva del NASA Space Apps Challenge en la Universidad Provincial de Córdoba (UPC).
   </figcaption>
 </figure>
 
