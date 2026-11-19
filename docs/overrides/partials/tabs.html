@@ -12,7 +12,7 @@
           <li class="md-tabs__item md-tabs__section{% if state.active %} md-tabs__item--active{% endif %}">
             <details class="md-tabs__dropdown" name="site-navigation">
               <summary class="md-tabs__section-title">{{ nav_item.title }}</summary>
-              <ul class="md-tabs__submenu">
+              <ul class="md-tabs__submenu" popover="auto">
                 {% for item in nav_item.children %}
                   <li>
                     <a href="{{ item.url | url }}"{% if item.active %} aria-current="page"{% endif %}>

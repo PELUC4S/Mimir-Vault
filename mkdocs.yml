@@ -25,6 +25,9 @@ theme:
     - content.code.copy
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - javascripts/search.js
+  - javascripts/navigation.js
 extra:
   generator: false
 # Estructura del menú lateral (Navegación)
