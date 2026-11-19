@@ -1,5 +1,9 @@
 <div class="profile-hero" markdown="1">
 
+<div style="text-align: center; margin-bottom: 1.75rem;">
+  <img src="../assets/img/nasa-space-apps-logo.png" alt="NASA Space Apps Challenge" style="max-width: 440px; width: 100%; height: auto; filter: drop-shadow(0 0 14px rgba(56, 189, 248, 0.25));">
+</div>
+
 # Peluc4s to the <span class="title-highlight">Moon</span>
 
 <span class="badge">NASA SPACE APPS CHALLENGE · DEVSECOPS · AUDITORÍA IA</span>
@@ -28,7 +32,7 @@ Trabajamos con Gemini Flash en VS Code y Antigravity. Al revisar el código gene
       <h3>Problema Oficial</h3>
     </div>
     <p class="lab-goal">Desafío global de la NASA para la adaptación agrícola mediante datos satelitales.</p>
-    <p><a href="https://www.spaceappschallenge.org/2026/challenges/adapting-farms-with-nasa-data/" target="_blank" rel="noopener">spaceappschallenge.org/2026/challenges/adapting-farms-with-nasa-data/ ↗</a></p>
+    <p><a href="https://www.spaceappschallenge.org/2026/challenges/adapting-farms-with-nasa-data/" target="_blank" rel="noopener">Adapting farms with nasa data/ ↗</a></p>
   </article>
 
   <article class="lab-card">
@@ -40,6 +44,20 @@ Trabajamos con Gemini Flash en VS Code y Antigravity. Al revisar el código gene
     <p><a href="https://github.com/PELUC4S/FieldShift" target="_blank" rel="noopener">github.com/PELUC4S/FieldShift ↗</a></p>
   </article>
 </div>
+
+<figure style="margin: 2.25rem 0 2rem; text-align: center;">
+  <img src="../assets/img/hackathon-equipo-peluc4s.jpg" alt="Equipo Peluc4s durante la jornada del NASA Space Apps Challenge" style="width: 100%; max-width: 880px; border: 1px solid var(--mv-border); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45); display: block; margin: 0 auto;">
+  <figcaption style="margin-top: 0.65rem; color: var(--mv-muted); font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em;">
+    El equipo de Peluc4s.
+  </figcaption>
+</figure>
+
+<figure style="margin: 2.25rem 0 2rem; text-align: center;">
+  <img src="../assets/img/hackathon-equipo-peluc4s.jpg" alt="Equipo Peluc4s durante la jornada del NASA Space Apps Challenge" style="width: 100%; max-width: 880px; border: 1px solid var(--mv-border); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45); display: block; margin: 0 auto;">
+  <figcaption style="margin-top: 0.65rem; color: var(--mv-muted); font-size: 0.8rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em;">
+    El equipo de Peluc4s y participantes durante la jornada intensiva del NASA Space Apps Challenge en la Universidad Provincial de Córdoba (UPC).
+  </figcaption>
+</figure>
 
 ---
 
