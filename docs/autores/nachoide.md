@@ -75,6 +75,16 @@
   fill: currentColor;
   flex-shrink: 0;
 }
+.nacho-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+.nacho-btn--sm {
+  padding: 0.3rem 0.65rem;
+  font-size: 0.75rem;
+}
 .nacho-timeline {
   position: relative;
   margin: 1.5rem 0 2rem 0.5rem;
@@ -356,7 +366,7 @@
 </style>
 
 <div class="profile-hero nacho-hero">
-<img class="avatar" src="../../assets/img/nachoide.png" alt="Foto de perfil de Ignacio Vendrell">
+<img class="avatar" src="../assets/img/nachoide.png" alt="Foto de perfil de Ignacio Vendrell">
 <h1 class="nacho-hero-title">Ignacio Vendrell</h1>
 <span class="profile-role">[CIBERSEGURIDAD · INFORMÁTICA FORENSE · DESARROLLO]</span>
 <span class="nacho-subtitle">Estudiante de Ciberseguridad · Perito Informático Forense (CPCI) · Desarrollador de software</span>
@@ -526,6 +536,32 @@
 <span class="nacho-chip">Markdown</span>
 </div>
 </a>
+
+<div class="nacho-card">
+<div class="nacho-card-header">
+<span class="nacho-tag nacho-tag--project">Proyecto · Hackathon</span>
+<span class="nacho-card-arrow">↗</span>
+</div>
+<p class="nacho-card-title">FieldShift — NASA Space Apps Challenge</p>
+<p class="nacho-card-desc">Solución desarrollada para el desafío de la NASA para la adaptación agrícola mediante datos satelitales (NASA POWER API) y backend en FastAPI, implementada con enfoque DevSecOps y auditoría de seguridad en IA.</p>
+<div class="nacho-card-actions">
+<a href="https://github.com/PELUC4S/FieldShift" class="nacho-btn nacho-btn--sm" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+<span>GitHub</span>
+</a>
+<a href="https://fieldshift-api.onrender.com/" class="nacho-btn nacho-btn--sm" target="_blank" rel="noopener">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+<span>Demo / API</span>
+</a>
+</div>
+<div class="nacho-chips">
+<span class="nacho-chip">FastAPI</span>
+<span class="nacho-chip">Python</span>
+<span class="nacho-chip">NASA POWER API</span>
+<span class="nacho-chip">DevSecOps</span>
+<span class="nacho-chip">Render</span>
+</div>
+</div>
 </div>
 
 ## CTFs y Writeups
